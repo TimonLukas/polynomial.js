@@ -2,7 +2,7 @@
   "name": "polynomial.js",
   "version": "1.0.0",
   "description": "A small library that helps you create a polynomial function out of a set of points",
-  "main": "Polynomial.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
