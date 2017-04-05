@@ -1,0 +1,25 @@
+{
+  "name": "polynomial.js",
+  "version": "1.0.0",
+  "description": "A small library that helps you create a polynomial function out of a set of points",
+  "main": "Polynomial.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "math",
+    "polynomial",
+    "point",
+    "points"
+  ],
+  "author": "Timon Lukas <timon.lukas3@gmail.com>",
+  "license": "ISC"
+}
