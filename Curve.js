@@ -2,6 +2,7 @@ const calculatePolynomialCoefficients = require("./Polynomial").calculatePolynom
 const calculateValueForPolynomial = require("./Polynomial").calculateValueForPolynomial;
 
 module.exports = class Curve {
+
     /**
      * Construct the curve
      * @param {Array} points

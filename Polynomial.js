@@ -19,7 +19,7 @@ const denominator = (i, points) => {
     let result = 1;
     let x_i = points[i].x;
     for (let j = points.length; j--;) {
-        if (i != j) {
+        if (i !== j) {
             result *= x_i - points[j].x;
         }
     }
@@ -32,7 +32,7 @@ const interpolationPolynomial = (i, points) => {
     let newCoefficients;
 
     for (let k = 0; k < points.length; k++) {
-        if (k == i) {
+        if (k === i) {
             continue;
         }
         newCoefficients = zeros(points.length);
@@ -72,6 +72,4 @@ const calculateValueForPolynomial = (x, coefficients) => {
 module.exports = {
     calculatePolynomialCoefficients,
     calculateValueForPolynomial,
-    Curve: require("./Curve"),
-    Point: require("./Point"),
 };

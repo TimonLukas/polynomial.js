@@ -23,7 +23,7 @@ let curve = new Curve(points);
 let y = curve.compute(5); // 130.03044
 ```
 
-Calculating all values from 0 to 100 with the above curve would yield these points: http://pastebin.hursley.ibm.com/9117
+Calculating all values from 0 to 100 with the above curve would yield these points: https://pastebin.com/Ucz92TTe
 
 ## Manual API
 If you want to do things manually, here is how:
@@ -57,6 +57,10 @@ To confirm that this actually works you can just input your original x values, a
 ```javascript
 points.forEach((point) => {
     let y = Polynomial.calculateValueForPolynomial(point.x, coefficients);
-    console.log(point.y == y);
+    console.log(point.y === y);
 });
 ```
+
+## Tests
+
+To run the tests, simply type `npm run test`. `mocha` and `chai` are included as dev dependencies.
