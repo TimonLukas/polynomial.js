@@ -63,4 +63,4 @@ points.forEach((point) => {
 
 ## Tests
 
-To run the tests, simply type `npm run test`. `mocha` and `chai` are included as dev dependencies.
+To run the tests, simply type `npm run test`. For coverage run `npm run cover`. `istanbul`, `mocha` and `chai` are included as dev dependencies.
