@@ -1,13 +1,23 @@
 # polynomial.js
-Polynomial.js is a very simple and small library that helps with creating a polynomial function from points and afterwards to calculate points on it.
+Polynomial.js is a very simple and small library that helps you calculate polynomial coefficients from points and calculating points based on the curve they represent.
 
 It is based on this StackOverflow answer: http://stackoverflow.com/a/9861559
 
+## Installation
+Simply use `npm` or `yarn` to install the package:
+```bash
+npm install polynomial.js
+```
+```bash
+yarn install polynomial.js
+```
 
-All points supplied to the library must be objects with an x- and a y-property. To help you with this, I included a small class, "Point.js". Its' constructor will create such an object for you.
-## Curve
-To make this easier I've included a class which gives a nice, clean API:
+## Notes
+* All points supplied to the library must be objects with an x- and a y-property.
+* To help you with this, you can use the exported class `Point` (`require("polynomial.js").Point`). Its' constructor will create such an object for you. It will throw a TypeError if a non-numerical value is supplied.  
+* Calculating all values from 0 to 100 with the above curve would yield these points: https://pastebin.com/Ucz92TTe
 
+## Example
 ```javascript
 const Curve = require("polynomial.js").Curve;
 
@@ -23,11 +33,7 @@ let curve = new Curve(points);
 let y = curve.compute(5); // 130.03044
 ```
 
-Calculating all values from 0 to 100 with the above curve would yield these points: https://pastebin.com/Ucz92TTe
-
 ## Manual API
-If you want to do things manually, here is how:
-
 To create the coefficients array, pass an array with all your points into the method `calculatePolynomialCoefficients`, like this:
 
 ```javascript
@@ -47,8 +53,6 @@ let coefficients = Polynomial.calculatePolynomialCoefficients(points);
 To calculate a point using those coefficients you can use the method `calculateValueForPolynomial`:
 
 ```javascript
-// assuming the coefficients were already calculated
-
 let y = Polynomial.calculateValueForPolynomial(5, coefficients);
 ```
 
